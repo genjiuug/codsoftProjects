@@ -1,3 +1,4 @@
+#import tkinter 
 from tkinter import *
 
 firstnumber=secnumber=operator=None
@@ -16,7 +17,7 @@ def get_operator(op):
     firstnumber = int(resultlabels['text'])
     operator = op
     resultlabels.config(text='')
-
+#operations
 def get_result():
     global firstnumber,secnumber,operator
 
@@ -71,39 +72,40 @@ btn5.config(font=('verdana',14))
 btn6 = Button(root,text='6',fg='black',bg='white',width=6,height=3,command=lambda :get_digit(6))
 btn6.grid(row=2,column=2)
 btn6.config(font=('verdana',14))
-
+#subtraction button
 btn_subtract = Button(root,text='-',fg='black',bg='white',width=6,height=3,command=lambda :get_operator('-'))
 btn_subtract.grid(row=2,column=3)
 btn_subtract.config(font=('verdana',14))
-
+#Number 1 button
 btn1 = Button(root,text='1',fg='black',bg='white',width=6,height=3,command=lambda :get_digit(1))
 btn1.grid(row=3,column=0)
 btn1.config(font=('verdana',14))
-
+#Number 2 button
 btn2 = Button(root,text='2',fg='black',bg='white',width=6,height=3,command=lambda :get_digit(2))
 btn2.grid(row=3,column=1)
 btn2.config(font=('verdana',14))
-
+#Number 3 button
 btn3 = Button(root,text='3',fg='black',bg='white',width=6,height=3,command=lambda :get_digit(3))
 btn3.grid(row=3,column=2)
 btn3.config(font=('verdana',14))
+#Multiplication button * operation
 
 btnmultiply = Button(root,text='*',fg='black',bg='white',width=6,height=3,command=lambda :get_operator('*'))
 btnmultiply.grid(row=3,column=3)
 btnmultiply.config(font=('verdana',14))
-
+#clear button
 btnclear = Button(root,text='C',fg='black',bg='white',width=6,height=3,command=lambda :clear())
 btnclear.grid(row=4,column=0)
 btnclear.config(font=('verdana',14))
-
+#Number 0 button
 btn0 = Button(root,text='0',fg='black',bg='white',width=6,height=3,command=lambda :get_digit(0))
 btn0.grid(row=4,column=1)
 btn0.config(font=('verdana',14))
-
+#Number equal to button
 btnequ = Button(root,text='=',fg='black',bg='white',width=6,height=3,command=get_result)
 btnequ.grid(row=4,column=2)
 btnequ.config(font=('verdana',14))
-
+#Number / button
 btndivide = Button(root,text='/',fg='black',bg='white',width=6,height=3,command=lambda :get_operator('/'))
 btndivide.grid(row=4,column=3)
 btndivide.config(font=('verdana',14))
